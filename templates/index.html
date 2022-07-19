@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dockerize flask app</title>
+</head>
+<body>
+    <h1> Instrucciones De Uso: </h1>
+    <table>
+            <tr>
+                <th>CA</th>
+                <th>URL</th>
+                <th>Palabra</th>
+            </tr>        
+            <tr>
+                <td>CA1</td>
+                <td>http://127.0.0.1:5000/searchComics?name=spider&type=personaje</td>
+                <td>name={CambiarPalabra}</td>
+            </tr>
+            <tr>
+                <td>CA2</td>
+                <td>http://localhost:5000/searchComics?name=&type=personaje</td>
+                <td>type={Cambiar entre "personaje o comic"}</td>
+            </tr>
+            <tr>
+                <td>CA3</td>
+                <td>http://127.0.0.1:5000/searchComics?name=spider&type=personaje</td>
+                <td>type={Cambiar entre "personaje o comic"}</td>
+            </tr>
+    </table>
+    <form action = "http://localhost:5000/searchComics" method = "get">
+        <p>Enter Name:</p>
+        <p><input type = "text" name = "name" /> Ingrese nombre de personaje o comic</p>
+        <p>Enter Type:</p>
+        <input type="radio" name="type" value="personaje" checked>personaje<br>
+        <input type="radio" name="type" value="comic">comic<br>
+        <p><input type = "submit" value = "submit" /></p>
+    </form>
+</body>
+</html>
